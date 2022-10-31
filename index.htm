@@ -19,10 +19,10 @@
       <a class="navbar-brand" href="#"><b>CONVERT PROJECT !</b></a>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link text-white bg-black" href="#scrollspyHeading1">BINARY</a>
+          <a class="nav-link text-white bg-black" href="#binary">BINARY</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white bg-black" href="#scrollspyHeading2">DECIMAL</a>
+          <a class="nav-link text-white bg-black" href="#decimal">DECIMAL</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle bg-black text-white " data-bs-toggle="dropdown" href="#" role="button"
@@ -70,8 +70,8 @@
         deadlines, rewards and recognition, and lastly, quotable advice for project managers.
         <br>
         <br>
-        DEVELOPED BY AAYAN
-      </p>
+        <b>DEVELOPED BY AAYAN</b>
+      </>
     </div>
     <div class="container2">
       <div class="mb-5">
@@ -84,10 +84,11 @@
           SECTION] !</label>
         <input type="text" class="form-control-plaintext text-white" id="decimal" placeholder="ENTER A DECIMAL NUMBER">
       </div>
-      <button type="button" class="btn btn-warning" onclick="convert1()">CONVERT D-B</button>
-      <button type="button" class="btn btn-warning" onclick="convert2()">CONVERT B-D</button>
-      <button id="b1" type="button" class="btn btn-danger" onclick="refresh()">REFRESH</button>
-
+      <div class="container3">
+        <button type="button" class="btn btn-warning" onclick="convert1()">CONVERT D-B</button>
+        <button type="button" class="btn btn-warning" onclick="convert2()">CONVERT B-D</button>
+        <button id="b1"  type="button" class="btn btn-danger" onclick="refresh()">REFRESH</button>
+      </div>
     </div>
   </div>
 </body>
@@ -105,10 +106,6 @@
     i = 1 + i;
     document.getElementById("binary").value = i;
   }
-
-
-
-
 
 
   function convert2() {
@@ -136,10 +133,10 @@
   }
 
 
-    function refresh() {
-      document.getElementById("binary").value = "";
-      document.getElementById("decimal").value = "";
-    }
+  function refresh() {
+    document.getElementById("binary").value = "";
+    document.getElementById("decimal").value = "";
+  }
 </script>
 
 </html>
