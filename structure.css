@@ -1,0 +1,27 @@
+.container{
+    height: 3000px;
+    width: 100%;
+    background-color: black;
+    font-size: 15px;
+}
+.container2{
+    margin-top: 15%;
+    font-size: 30px;
+    color: white;
+}
+.container2 input{
+
+    border: 2px solid white;
+
+}
+.container2 button{
+    font-size: 40px;
+}
+#b1{
+    font-size: 40px;
+    display: flex;
+    float: right;
+}
+b{
+    font-family: 'Courier New';
+}

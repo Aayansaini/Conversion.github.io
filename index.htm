@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="TEXT/CSS" href="structure.css" />
+  <title>B-D & D-B</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+<body>
+  <div class="container">
+    <nav id="navbar-example2" class="navbar bg-warning px-3 mb-3">
+      <a class="navbar-brand" href="#"><b>CONVERT PROJECT !</b></a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link text-white bg-black" href="#scrollspyHeading1">BINARY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white bg-black" href="#scrollspyHeading2">DECIMAL</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-black text-white " data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">DETAILS</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading1">Binary To Decimal</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading2">Decimal To Binary</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#scrollspyHeading3">ABOUT PROJECT</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true" class="scrollspy-example bg-warning p-3 rounded-2" tabindex="0">
+      <h4 id="scrollspyHeading1">What is Binary Number?</h4>
+      <p>A number system where a number is represented by using only two digits (0 and 1) with a base 2 is called a
+        binary number system. For example, 10012 is a binary number.</p>
+      <h4 id="scrollspyHeading2">What is Decimal Number?</h4>
+      <p>A decimal is a number that consists of a whole and a fractional part. Decimal numbers lie between integers and
+        represent numerical value for quantities that are whole plus some part of a whole. Fractional form: In fraction
+        form, we can write that there is one and one-half of a pizza. That is 1 1 2 pizza.</p>
+      <h4 id="scrollspyHeading3">ABOUT PROJECT :-</h4>
+      <p>Hello Everyone ! <br>
+        In this convertor project converts Decimal digits to Binary form and Binary digits to Decimal form.<br>
+        Given the many books that have been written about project management, it is not surprising that our discipline
+        has its fair share of quotable wisdom. We have compiled some of the best project management quotes which we hope
+        you’ll find profound, funny and motivational. And you (nearly) always sound smart if you can quote other people
+        who manage to say exactly what you meant, in just a few succinct, simple words.<br>
+
+        We not only bring you famous project management quotes, we’ve gone one step further by including quotes on
+        project management, but which are so apt, the author may well have been speaking of project management. And of
+        course, we include some perennial favorites – classic project management quotes from Peter Drucker.<br>
+
+        Enjoy this compilation of more than 100 of the most inspiring and funny project management quotes covering
+        project management, leadership, planning, communication, failure, teamwork, vision and goals, management,
+        deadlines, rewards and recognition, and lastly, quotable advice for project managers.
+        <br>
+        <br>
+        DEVELOPED BY AAYAN
+      </p>
+    </div>
+    <div class="container2">
+      <div class="mb-5">
+        <label for="formGroupExampleInput" class="form-label text-white">->BINARY-NUMBER [SEE OUTPUT IN DECIMAL SECTION]
+          !</label>
+        <input type="text" class="form-control-plaintext text-white" id="binary" placeholder="ENTER A BINARY NUMBER">
+      </div>
+      <div class="mb-5">
+        <label for="formGroupExampleInput2" class="form-label text-white">->DECIMAL-NUMBER [SEE OUTPUT IN BINARY
+          SECTION] !</label>
+        <input type="text" class="form-control-plaintext text-white" id="decimal" placeholder="ENTER A DECIMAL NUMBER">
+      </div>
+      <button type="button" class="btn btn-warning" onclick="convert1()">CONVERT D-B</button>
+      <button type="button" class="btn btn-warning" onclick="convert2()">CONVERT B-D</button>
+      <button id="b1" type="button" class="btn btn-danger" onclick="refresh()">REFRESH</button>
+
+    </div>
+  </div>
+</body>
+<script>
+  function convert1() {
+    y = document.getElementById("binary").value;
+    x = document.getElementById("decimal").value;
+    var n = x;
+    var i = "";
+    while (n != 1) {
+      var digit = parseInt(n % 2);
+      i = digit + i;
+      n = parseInt(n / 2);
+    }
+    i = 1 + i;
+    document.getElementById("binary").value = i;
+  }
+
+
+
+
+
+
+  function convert2() {
+    y = document.getElementById("binary").value;
+    x = document.getElementById("decimal").value;
+    var o = y.length;
+    if (o >= 1) {
+      var a = Number(y);
+      var k = 0;
+      var z = 0;
+      for (k = 0; k <= o; k++) {
+        var m = parseInt(a % 10);
+        a = parseInt(a / 10);
+        if (m == 1) {
+          z = z + Math.pow(2, k);
+        } else if (m == 0) {
+          z = z;
+        } else {
+          alert("Number Enter is not Binary");
+          break;
+        }
+      }
+      document.getElementById("decimal").value = z;
+    }
+  }
+
+
+    function refresh() {
+      document.getElementById("binary").value = "";
+      document.getElementById("decimal").value = "";
+    }
+</script>
+
+</html>
